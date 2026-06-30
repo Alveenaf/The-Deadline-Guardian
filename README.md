@@ -1,4 +1,4 @@
-*🛡️ The Deadline Guardian
+**🛡️ The Deadline Guardian**
 
 An AI-powered productivity strategist built for the **Google AI Studio Vibe Coding Hackathon** under the **"The Last-Minute Life Saver"** problem statement.
 
@@ -6,7 +6,7 @@ The Deadline Guardian acts as an intelligent execution companion that helps user
 
 
 
-**🚀 Live Demo
+🚀 Live Demo
 
 > Add your deployed application link here after publishing.
 
