@@ -1,0 +1,6 @@
+{
+  "name": "THE DEADLINE GUARDIAN",
+  "description": "Your supportive AI companion that prevents overwhelm and reduces daily stress. It actively helps you prioritize, structure, and complete your commitments with a gentle, anxiety-free workflow.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

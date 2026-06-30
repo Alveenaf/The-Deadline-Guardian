@@ -1,0 +1,1166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-primary-dark: #7C5CFC;
+  --color-secondary-dark: #EC4899;
+  --color-accent-dark: #06B6D4;
+  --color-success-dark: #22C55E;
+  --color-warning-dark: #F59E0B;
+  --color-danger-dark: #EF4444;
+  
+  --color-primary-light: #7C3AED;
+  --color-secondary-light: #EC4899;
+  --color-accent-light: #F97316;
+}
+
+/* Base resets & dark mode defaults with specified hex colors */
+body {
+  background-color: #151515 !important;
+  color: #EEEEEE !important;
+  font-family: "Inter", sans-serif;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom premium scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #151515 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3C415C !important;
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #301B3F !important;
+}
+
+/* Premium Card & Surface style mappings */
+.bg-white\/5,
+.bg-black\/40,
+.bg-white\/10,
+.bg-[#121214],
+.bg-\[\#121214\],
+.bg-slate-900,
+.bg-slate-900\/50,
+.bg-slate-950,
+.bg-slate-950\/80 {
+  background-color: #1D1D1D !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-color: rgba(180, 165, 165, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Elevated hover card states */
+.bg-white\/5:hover,
+.bg-slate-900\/60:hover,
+.bg-slate-900\/40:hover {
+  background-color: #301B3F !important;
+  border-color: rgba(180, 165, 165, 0.15) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-2px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sidebars and headers */
+aside {
+  background-color: #151515 !important;
+  border-right-color: rgba(180, 165, 165, 0.1) !important;
+}
+
+header {
+  background-color: #151515 !important;
+  border-bottom-color: rgba(180, 165, 165, 0.1) !important;
+}
+
+/* Interactive custom selections */
+::selection {
+  background-color: rgba(48, 27, 63, 0.5) !important;
+  color: #EEEEEE !important;
+}
+
+/* Color definitions */
+.text-indigo-400, .text-purple-400 {
+  color: #B4A5A5 !important;
+}
+.text-rose-400, .text-pink-400 {
+  color: #B4A5A5 !important;
+}
+.text-emerald-400, .text-green-400 {
+  color: #22C55E !important;
+}
+.text-amber-400, .text-yellow-400 {
+  color: #F59E0B !important;
+}
+.text-rose-500, .text-red-400 {
+  color: #EF4444 !important;
+}
+
+/* Brand Button style */
+button.bg-gradient-to-r,
+.bg-indigo-600 {
+  background: #301B3F !important;
+  color: #EEEEEE !important;
+  box-shadow: 0 8px 20px rgba(48, 27, 63, 0.4) !important;
+  border: none !important;
+}
+
+button.bg-gradient-to-r:hover,
+.bg-indigo-600:hover {
+  background: #3C415C !important;
+  box-shadow: 0 8px 20px rgba(60, 65, 92, 0.4) !important;
+}
+
+/* ==========================================================================
+   ELEGANT PREMIUM WELLNESS LIGHT THEME OVERRIDES (.theme-light)
+   ========================================================================== */
+
+.theme-light {
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+.theme-light body {
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+/* Ambient glow soft overlay accents with neutral/indigo colors */
+.theme-light .blur-[140px],
+.theme-light .blur-[120px] {
+  background-color: rgba(234, 221, 195, 0.35) !important;
+}
+
+/* Premium white cards and layout containers (Soft shadows and fine borders) */
+.theme-light .bg-white\/5,
+.theme-light .bg-black\/40,
+.theme-light .bg-white\/10,
+.theme-light .bg-\[\#151D33\]\/40,
+.theme-light .bg-\[\#151D33\]\/95,
+.theme-light .bg-\[\#121214\],
+.theme-light .bg-\[\#11131A\],
+.theme-light .bg-\[\#181C27\],
+.theme-light .bg-slate-900,
+.theme-light .bg-slate-900\/50,
+.theme-light .bg-slate-950,
+.theme-light .bg-\[\#0a0a0c\],
+.theme-light .bg-slate-950\/80,
+.theme-light .bg-white,
+.theme-light .bg-slate-900\/60,
+.theme-light .bg-slate-900\/40,
+.theme-light [id$="-card"],
+.theme-light [id$="-panel"],
+.theme-light [id$="-root"] .border,
+.theme-light .rounded-3xl.border {
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03) !important;
+  color: #000000 !important;
+}
+
+/* Card hover lift effect */
+.theme-light .bg-white\/5:hover,
+.theme-light .bg-slate-900\/60:hover,
+.theme-light .bg-slate-900\/40:hover,
+.theme-light .hover\:bg-white\/10:hover,
+.theme-light .hover\:border-indigo-500\/10:hover,
+.theme-light .hover\:border-indigo-500\/20:hover,
+.theme-light .hover\:border-rose-500\/20:hover {
+  background-color: #FFFFFF !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+  transform: translateY(-2px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Sidebar with premium Notion/Arc look and collapse transition */
+.theme-light aside,
+.theme-light .premium-sidebar {
+  background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.theme-light aside nav button {
+  border-radius: 8px !important;
+  color: #000000 !important;
+  border: none !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.theme-light aside nav button svg {
+  color: #000000 !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.theme-light aside nav button:hover {
+  background-color: #F4F4F5 !important;
+  color: #000000 !important;
+}
+
+.theme-light aside nav button:hover svg {
+  color: #000000 !important;
+}
+
+.theme-light aside nav button.nav-active-glow,
+.theme-light aside nav button:active {
+  background-color: #F4F4F5 !important;
+  color: #000000 !important;
+  border: none !important;
+  border-left: 3px solid #000000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.theme-light aside nav button.nav-active-glow svg,
+.theme-light aside nav button:active svg {
+  color: #000000 !important;
+}
+
+.theme-light aside nav button.nav-active-glow span,
+.theme-light aside nav button:active span {
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+/* Header style & borders */
+.theme-light header {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.theme-light .border-white\/5,
+.theme-light .border-white\/15,
+.theme-light .border-slate-800,
+.theme-light .border-indigo-500\/15,
+.theme-light .border-indigo-500\/20,
+.theme-light .border-white\/20,
+.theme-light .border-white\/30,
+.theme-light .border-b,
+.theme-light .border-t,
+.theme-light .border-r,
+.theme-light .border {
+  border-color: rgba(128, 0, 0, 0.1) !important;
+}
+
+/* Font Overrides in Light Mode - Clean, high contrast */
+.theme-light h1,
+.theme-light h2,
+.theme-light h3,
+.theme-light h4,
+.theme-light .text-white,
+.theme-light .text-slate-5,
+.theme-light .text-slate-50,
+.theme-light .text-slate-100,
+.theme-light .text-slate-200,
+.theme-light .text-slate-100\/90,
+.theme-light .text-slate-200\/90,
+.theme-light .text-slate-900,
+.theme-light .text-gray-50,
+.theme-light .text-gray-100,
+.theme-light .text-gray-200,
+.theme-light .text-zinc-50,
+.theme-light .text-zinc-100,
+.theme-light .text-zinc-200,
+.theme-light .text-indigo-50,
+.theme-light .text-indigo-100,
+.theme-light .text-indigo-200,
+.theme-light .text-purple-50,
+.theme-light .text-purple-100,
+.theme-light .text-purple-200,
+.theme-light .text-pink-50,
+.theme-light .text-pink-100,
+.theme-light .text-pink-200,
+.theme-light .text-amber-50,
+.theme-light .text-amber-100,
+.theme-light .text-amber-200 {
+  color: #800000 !important;
+}
+
+.theme-light .text-slate-300,
+.theme-light .text-slate-400,
+.theme-light .text-slate-200\/80,
+.theme-light p.text-slate-300,
+.theme-light p.text-slate-400,
+.theme-light span.text-slate-400,
+.theme-light .text-gray-300,
+.theme-light .text-gray-400,
+.theme-light .text-zinc-300,
+.theme-light .text-zinc-400 {
+  color: #000000 !important;
+}
+
+.theme-light .text-slate-500,
+.theme-light p.text-slate-500,
+.theme-light span.text-slate-500,
+.theme-light .text-slate-400\/80,
+.theme-light .text-gray-500,
+.theme-light .text-zinc-500 {
+  color: #000000 !important;
+}
+
+.theme-light .text-slate-600,
+.theme-light .text-slate-400\/60,
+.theme-light .text-slate-500\/70,
+.theme-light .text-slate-300\/50,
+.theme-light .text-slate-500\/50,
+.theme-light .text-gray-600,
+.theme-light .text-zinc-600 {
+  color: #000000 !important;
+}
+
+/* Highlighting important texts using Maroon */
+.theme-light .text-indigo-300,
+.theme-light .text-indigo-400,
+.theme-light .text-indigo-500,
+.theme-light .text-purple-300,
+.theme-light .text-purple-400,
+.theme-light .text-purple-500,
+.theme-light .text-pink-300,
+.theme-light .text-pink-400,
+.theme-light .text-pink-500,
+.theme-light .text-[#7C3AED],
+.theme-light .text-emerald-300 {
+  color: #800000 !important;
+}
+
+/* Companion Panel and General Overrides */
+.theme-light #guardian-dashboard-companion,
+.theme-light #guardian-companion-panel,
+.theme-light .bg-gradient-to-br.from-indigo-950\/20,
+.theme-light .from-indigo-950\/20 {
+  background-image: none !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03) !important;
+}
+
+.theme-light #guardian-dashboard-companion *,
+.theme-light #guardian-companion-panel * {
+  color: #000000 !important;
+}
+
+.theme-light #guardian-dashboard-companion span,
+.theme-light #guardian-companion-panel span {
+  color: #000000 !important;
+}
+
+/* Active crisis protocol triage container overlay */
+.theme-light .bg-gradient-to-br.from-\[\#120a10\],
+.theme-light .from-\[\#120a10\] {
+  background-image: none !important;
+  background: #FFFFFF !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Keep success and safety actions in clean green cues or Maroon */
+.theme-light button.bg-gradient-to-r.from-emerald-600,
+.theme-light .bg-gradient-to-r.from-emerald-600,
+.theme-light .from-emerald-600,
+.theme-light .bg-emerald-600 {
+  background-image: none !important;
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.theme-light button.bg-gradient-to-r.from-emerald-600 *,
+.theme-light .bg-gradient-to-r.from-emerald-600 *,
+.theme-light .from-emerald-600 *,
+.theme-light .bg-emerald-600 * {
+  color: #000000 !important;
+}
+
+/* Speech bubbles and chat overlays */
+.theme-light .bg-white\/5.rounded-tl-none {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.theme-light .bg-indigo-600.rounded-tr-none {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.theme-light .bg-indigo-600.rounded-tr-none * {
+  color: #000000 !important;
+}
+
+/* Save My Day Signature rescue elements */
+.theme-light .from-orange-500.to-pink-500,
+.theme-light .bg-gradient-to-br.from-orange-500.to-pink-500 {
+  background: #FFFFFF !important;
+  background-image: none !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+.theme-light .from-orange-500.to-pink-500 *,
+.theme-light .bg-gradient-to-br.from-orange-500.to-pink-500 * {
+  color: #000000 !important;
+}
+
+.theme-light #save-my-day-btn {
+  border-radius: 16px !important;
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.theme-light #save-my-day-btn * {
+  color: #800000 !important;
+}
+
+/* Primary buttons style overrides */
+.theme-light button.bg-gradient-to-r,
+.theme-light button.bg-gradient-to-br:not(#save-my-day-card),
+.theme-light .bg-indigo-600,
+.theme-light .bg-\[\#7C5CFC\],
+.theme-light button.bg-indigo-600 {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #000000 !important;
+  border-radius: 16px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.theme-light button.bg-gradient-to-r *,
+.theme-light button.bg-gradient-to-br:not(#save-my-day-card) *,
+.theme-light .bg-indigo-600 *,
+.theme-light .bg-\[\#7C5CFC\] *,
+.theme-light button.bg-indigo-600 * {
+  color: #FFFFFF !important;
+}
+
+.theme-light button.bg-gradient-to-r:hover,
+.theme-light button.bg-gradient-to-br:hover:not(#save-my-day-card),
+.theme-light .bg-indigo-600:hover,
+.theme-light .bg-\[\#7C5CFC\]:hover {
+  background: #333333 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #333333 !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-1px);
+}
+
+/* Secondary / Quick Actions */
+.theme-light button.bg-white\/10.text-white,
+.theme-light button.hover\:bg-white\/5,
+.theme-light button.border-white\/10.text-slate-400,
+.theme-light .border-white\/10.text-slate-400,
+.theme-light button.px-3\.5.py-1\.5.bg-white {
+  background-color: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  color: #000000 !important;
+  border-radius: 16px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.theme-light button.bg-white\/10.text-white *,
+.theme-light button.hover\:bg-white\/5 *,
+.theme-light button.border-white\/10.text-slate-400 *,
+.theme-light .border-white\/10.text-slate-400 * {
+  color: #000000 !important;
+}
+
+.theme-light button.bg-white\/10.text-white:hover,
+.theme-light button.hover\:bg-white\/5:hover,
+.theme-light button.border-white\/10.text-slate-400:hover,
+.theme-light button.px-3\.5.py-1\.5.bg-white:hover {
+  background-color: #F4F4F5 !important;
+  color: #000000 !important;
+}
+
+/* Priority badges using soft Apple-style badges */
+.theme-light .bg-rose-500\/10.text-rose-400,
+.theme-light .bg-rose-500\/15.text-rose-400,
+.theme-light .text-rose-400 {
+  background-color: #FFF1F2 !important;
+  color: #E11D48 !important;
+  border: 1px solid rgba(225, 29, 72, 0.15) !important;
+}
+
+.theme-light .bg-amber-500\/10.text-amber-300,
+.theme-light .bg-amber-500\/15.text-amber-300,
+.theme-light .text-amber-300 {
+  background-color: #FEF3C7 !important;
+  color: #D97706 !important;
+  border: 1px solid rgba(217, 119, 6, 0.15) !important;
+}
+
+.theme-light .bg-slate-500\/10.text-slate-400,
+.theme-light .bg-emerald-500\/10,
+.theme-light .text-emerald-400 {
+  background-color: #ECFDF5 !important;
+  color: #059669 !important;
+  border: 1px solid rgba(5, 150, 105, 0.15) !important;
+}
+
+/* Checklist items and toggles */
+.theme-light input[type="checkbox"] {
+  accent-color: #000000 !important;
+  color: #000000 !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Form inputs & selections in light mode */
+.theme-light input,
+.theme-light select,
+.theme-light textarea {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  border-radius: 12px !important;
+}
+
+.theme-light input:focus,
+.theme-light select:focus,
+.theme-light textarea:focus {
+  background-color: #FFFFFF !important;
+  border-color: #000000 !important;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05) !important;
+  outline: none !important;
+}
+
+/* Light theme Scrollbars */
+.theme-light ::-webkit-scrollbar-track {
+  background: #000000 !important;
+}
+
+.theme-light ::-webkit-scrollbar-thumb {
+  background: #333333 !important;
+  border: 1px solid #000000 !important;
+  border-radius: 99px;
+}
+
+.theme-light ::-webkit-scrollbar-thumb:hover {
+  background: #555555 !important;
+}
+
+/* Progress lines/indicators */
+.theme-light .bg-purple-500\/15,
+.theme-light .bg-pink-500\/15 {
+  background-color: rgba(128, 0, 0, 0.1) !important;
+}
+
+
+
+/* Redesigned Save My Day card (Durable, visually stronger, responsive) */
+#dashboard-save-my-day-card {
+  background: linear-gradient(135deg, #B93160, #D14D72) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 10px 30px rgba(185, 49, 96, 0.25) !important;
+  border: none !important;
+  border-radius: 24px !important;
+  min-height: 180px !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 20px !important;
+}
+
+#dashboard-save-my-day-card h2,
+#dashboard-save-my-day-card .text-\[24px\] {
+  font-size: 24px !important;
+  line-height: 1.4 !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+}
+
+#dashboard-save-my-day-card p,
+#dashboard-save-my-day-card .text-\[14px\] {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#dashboard-save-my-day-card span {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+#dashboard-save-my-day-card button {
+  background-color: #FFFFFF !important;
+  color: #B93160 !important;
+  font-weight: 700 !important;
+  border-radius: 16px !important;
+  padding: 10px 16px !important;
+  box-shadow: 0 4px 12px rgba(185, 49, 96, 0.15) !important;
+  transition: all 0.2s ease-in-out !important;
+  border: none !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+}
+
+#dashboard-save-my-day-card button:hover {
+  background-color: #FFF0F5 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 15px rgba(185, 49, 96, 0.25) !important;
+}
+
+#dashboard-save-my-day-card button:active {
+  transform: translateY(0) !important;
+}
+
+#dashboard-save-my-day-card button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* Lock both Save My Day card and Rescue Room to use the same Dark Mode style in both modes */
+#dashboard-save-my-day-card,
+.theme-light #dashboard-save-my-day-card {
+  background: linear-gradient(135deg, #B93160, #D14D72) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 10px 30px rgba(185, 49, 96, 0.25) !important;
+  border: none !important;
+}
+
+#dashboard-save-my-day-card *,
+.theme-light #dashboard-save-my-day-card * {
+  color: #FFFFFF !important;
+}
+
+#dashboard-save-my-day-card h2,
+#dashboard-save-my-day-card p,
+#dashboard-save-my-day-card span,
+.theme-light #dashboard-save-my-day-card h2,
+.theme-light #dashboard-save-my-day-card p,
+.theme-light #dashboard-save-my-day-card span {
+  color: #FFFFFF !important;
+}
+
+#dashboard-save-my-day-card button,
+.theme-light #dashboard-save-my-day-card button {
+  background-color: #FFFFFF !important;
+  color: #B93160 !important;
+  font-weight: 700 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 12px rgba(185, 49, 96, 0.15) !important;
+  border: none !important;
+}
+
+#dashboard-save-my-day-card button *,
+.theme-light #dashboard-save-my-day-card button * {
+  color: #B93160 !important;
+}
+
+#dashboard-save-my-day-card button:hover,
+.theme-light #dashboard-save-my-day-card button:hover {
+  background-color: #FFF0F5 !important;
+  color: #B93160 !important;
+}
+
+#save-my-day-card,
+.theme-light #save-my-day-card {
+  background: linear-gradient(135deg, #B93160, #D14D72) !important;
+  box-shadow: 0 10px 30px rgba(185, 49, 96, 0.25) !important;
+  border: none !important;
+}
+
+#save-my-day-card *,
+.theme-light #save-my-day-card * {
+  color: #FFFFFF !important;
+}
+
+#save-my-day-card button,
+.theme-light #save-my-day-card button {
+  background-color: #FFFFFF !important;
+  color: #B93160 !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(185, 49, 96, 0.15) !important;
+}
+
+#save-my-day-card button *,
+.theme-light #save-my-day-card button * {
+  color: #B93160 !important;
+}
+
+#save-my-day-card button:hover,
+.theme-light #save-my-day-card button:hover {
+  background-color: #FFF0F5 !important;
+  color: #B93160 !important;
+}
+
+
+
+/* Sub-containers & nested panels in light mode */
+.theme-light .bg-\[\#121214\]\/50,
+.theme-light .bg-\[\#121214\]\/60,
+.theme-light .bg-\[\#121214\]\/60 *,
+.theme-light .bg-\[\#09090b\]\/50,
+.theme-light .bg-\[\#09090b\]\/50 *,
+.theme-light .bg-indigo-950\/20,
+.theme-light .bg-indigo-950\/20 *,
+.theme-light .bg-indigo-950\/40,
+.theme-light .bg-indigo-950\/40 * {
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  color: #000000 !important;
+}
+
+
+/* ==========================================================================
+   PREMIUM WELLNESS DARK THEME SPECIFIC OVERRIDES (:not(.theme-light))
+   ========================================================================== */
+
+/* Main backgrounds */
+:not(.theme-light) .bg-\[\#0B1120\],
+:not(.theme-light) .bg-[#0B1120],
+:not(.theme-light) .bg-slate-950,
+:not(.theme-light) .bg-slate-900\/50,
+:not(.theme-light) .min-h-screen {
+  background-color: #151515 !important;
+}
+
+/* Sidebar overrides */
+:not(.theme-light) aside {
+  background-color: #151515 !important;
+  border-right: 1px solid rgba(180, 165, 165, 0.1) !important;
+}
+
+:not(.theme-light) aside nav button {
+  color: #B4A5A5 !important;
+}
+
+:not(.theme-light) aside nav button svg {
+  color: #B4A5A5 !important;
+}
+
+:not(.theme-light) aside nav button:hover {
+  background-color: rgba(60, 65, 92, 0.4) !important;
+  color: #EEEEEE !important;
+  border-color: transparent !important;
+}
+
+:not(.theme-light) aside nav button:hover svg {
+  color: #EEEEEE !important;
+}
+
+:not(.theme-light) aside nav button.nav-active-glow {
+  background-color: #301B3F !important;
+  border-left: 3px solid #EEEEEE !important;
+  box-shadow: 0 4px 15px rgba(48, 27, 63, 0.4) !important;
+  color: #EEEEEE !important;
+}
+
+:not(.theme-light) aside nav button.nav-active-glow svg {
+  color: #EEEEEE !important;
+}
+
+/* Text overrides */
+:not(.theme-light) .text-white,
+:not(.theme-light) .text-slate-100,
+:not(.theme-light) .text-slate-200,
+:not(.theme-light) h1,
+:not(.theme-light) h2,
+:not(.theme-light) h3,
+:not(.theme-light) h4 {
+  color: #EEEEEE !important;
+}
+
+:not(.theme-light) .text-slate-300,
+:not(.theme-light) .text-slate-400 {
+  color: #B4A5A5 !important;
+}
+
+:not(.theme-light) .text-slate-500,
+:not(.theme-light) .text-slate-400\/80 {
+  color: rgba(180, 165, 165, 0.7) !important;
+}
+
+:not(.theme-light) .text-slate-600,
+:not(.theme-light) .text-slate-500\/50,
+:not(.theme-light) .text-slate-400\/60,
+:not(.theme-light) .text-slate-300\/50 {
+  color: rgba(180, 165, 165, 0.45) !important;
+}
+
+/* Save My Day signature actions */
+:not(.theme-light) button.bg-gradient-to-br.from-orange-500.to-pink-500,
+:not(.theme-light) button.from-rose-600.to-red-600,
+:not(.theme-light) button.from-rose-600 {
+  background: linear-gradient(135deg, #301B3F, #3C415C) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 25px rgba(48, 27, 63, 0.6), 0 0 15px rgba(60, 65, 92, 0.4) !important;
+  border: 1px solid rgba(180, 165, 165, 0.25) !important;
+}
+
+:not(.theme-light) button.bg-gradient-to-br.from-orange-500.to-pink-500 *,
+:not(.theme-light) button.from-rose-600.to-red-600 *,
+:not(.theme-light) button.from-rose-600 * {
+  color: #FFFFFF !important;
+}
+
+/* Guardian SUGGESTION Cards & Companion Avatar container background in dark mode */
+:not(.theme-light) .bg-gradient-to-br.from-indigo-950\/20,
+:not(.theme-light) .from-indigo-950\/20 {
+  background: linear-gradient(135deg, #301B3F, #151515) !important;
+  border-color: rgba(180, 165, 165, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Progress/Stat cards overrides for dark mode */
+:not(.theme-light) .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div {
+  background-color: #1D1D1D !important;
+  border-color: rgba(180, 165, 165, 0.08) !important;
+}
+
+:not(.theme-light) .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div span,
+:not(.theme-light) .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div p {
+  color: #B4A5A5 !important;
+}
+
+:not(.theme-light) .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div p.text-slate-900,
+:not(.theme-light) .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div p.text-white {
+  color: #EEEEEE !important;
+}
+
+:not(.theme-light) .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div .bg-pink-500\/15,
+:not(.theme-light) .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div .bg-purple-500\/15 {
+  background-color: #301B3F !important;
+  color: #B4A5A5 !important;
+}
+
+/* User message speech bubble */
+:not(.theme-light) .bg-indigo-600.rounded-tr-none {
+  background: #301B3F !important;
+  color: #EEEEEE !important;
+  border: 1px solid rgba(180, 165, 165, 0.15) !important;
+}
+
+/* Bot message speech bubble */
+:not(.theme-light) .bg-white\/5.rounded-tl-none {
+  background-color: #3C415C !important;
+  color: #EEEEEE !important;
+  border-color: rgba(180, 165, 165, 0.1) !important;
+}
+
+/* Form element inputs in dark mode */
+:not(.theme-light) input,
+:not(.theme-light) select,
+:not(.theme-light) textarea {
+  background-color: #1D1D1D !important;
+  color: #EEEEEE !important;
+  border: 1px solid rgba(180, 165, 165, 0.15) !important;
+}
+
+:not(.theme-light) input:focus,
+:not(.theme-light) select:focus,
+:not(.theme-light) textarea:focus {
+  background-color: #3C415C !important;
+  border-color: #301B3F !important;
+  outline: none !important;
+}
+
+/* GENTLE AI GUARDIAN BREATHING AND TYPING STYLES */
+.premium-sidebar {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(21, 21, 21, 0.72) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30) !important;
+}
+
+.theme-light .premium-sidebar {
+  background: #FFFFFF !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05) !important;
+}
+
+@keyframes guardianBreathe {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(128, 0, 0, 0.2));
+  }
+  50% {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 20px rgba(128, 0, 0, 0.4));
+  }
+}
+
+.animate-guardian-breathe {
+  animation: guardianBreathe 4s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+.animate-dot-pulse {
+  animation: dotPulse 1.2s infinite ease-in-out;
+}
+
+/* SMART GUARDIAN LIGHT THEME OVERRIDES */
+.theme-light .smart-guardian-container {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+.theme-light .smart-guardian-title {
+  color: #000000 !important;
+}
+
+.theme-light .smart-guardian-subtitle {
+  color: #000000 !important;
+}
+
+.theme-light .smart-guardian-textarea {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03) !important;
+}
+
+.theme-light .smart-guardian-textarea::placeholder {
+  color: #64748B !important;
+}
+
+.theme-light .smart-guardian-textarea:focus {
+  background-color: #FFFFFF !important;
+  border-color: #000000 !important;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.theme-light .smart-guardian-chat-bubble {
+  background-color: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.theme-light .chat-bubble-tag {
+  color: #000000 !important;
+}
+
+.theme-light .chat-bubble-text {
+  color: #000000 !important;
+}
+
+.theme-light .smart-guardian-reset-btn {
+  background-color: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  color: #000000 !important;
+}
+
+.theme-light .smart-guardian-reset-btn:hover {
+  background-color: #F4F4F5 !important;
+  color: #000000 !important;
+}
+
+.theme-light .smart-guardian-success-feedback {
+  background-color: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+.theme-light .success-feedback-tag {
+  color: #000000 !important;
+}
+
+.theme-light .success-feedback-text {
+  color: #000000 !important;
+}
+
+/* LIGHT MODE LINK AND TEXT COLOR GUARANTEES */
+.theme-light a,
+.theme-light a *,
+.theme-light [role="link"],
+.theme-light .text-indigo-600,
+.theme-light .text-indigo-600 *,
+.theme-light .text-blue-600,
+.theme-light .text-blue-500,
+.theme-light .text-indigo-500,
+.theme-light .text-indigo-400,
+.theme-light .text-pink-600,
+.theme-light .text-emerald-600,
+.theme-light .text-emerald-500,
+.theme-light .hover\:text-indigo-400:hover,
+.theme-light .hover\:text-white:hover {
+  color: #000000 !important;
+}
+
+.theme-light a:hover,
+.theme-light a:hover *,
+.theme-light [role="link"]:hover {
+  color: #333333 !important;
+  text-decoration: underline !important;
+}
+
+/* Ensure any remaining hardcoded text-white, text-slate-100/200/300/400/500, etc. in light mode is overridden to dark text */
+.theme-light .text-white,
+.theme-light .text-slate-50,
+.theme-light .text-slate-100,
+.theme-light .text-slate-200,
+.theme-light .text-slate-300,
+.theme-light .text-slate-400,
+.theme-light .text-slate-500,
+.theme-light .text-gray-100,
+.theme-light .text-gray-200,
+.theme-light .text-gray-300,
+.theme-light .text-gray-400,
+.theme-light .text-gray-500,
+.theme-light .text-zinc-100,
+.theme-light .text-zinc-200,
+.theme-light .text-zinc-300,
+.theme-light .text-zinc-400,
+.theme-light .text-zinc-500,
+.theme-light .text-neutral-100,
+.theme-light .text-neutral-200,
+.theme-light .text-neutral-300,
+.theme-light .text-neutral-400,
+.theme-light .text-neutral-500,
+.theme-light .text-slate-200\/90,
+.theme-light .text-slate-100\/90,
+.theme-light .text-indigo-100,
+.theme-light .text-indigo-200,
+.theme-light .text-indigo-300,
+.theme-light .text-indigo-400,
+.theme-light .text-purple-100,
+.theme-light .text-purple-200,
+.theme-light .text-purple-300,
+.theme-light .text-pink-100,
+.theme-light .text-pink-200,
+.theme-light .text-pink-300,
+.theme-light .text-pink-400,
+.theme-light [class*="text-slate-"],
+.theme-light [class*="text-gray-"],
+.theme-light [class*="text-zinc-"],
+.theme-light [class*="text-neutral-"],
+.theme-light [class*="text-white/"] {
+  color: #000000 !important;
+}
+
+.theme-light h1,
+.theme-light h2,
+.theme-light h3,
+.theme-light h4,
+.theme-light h5,
+.theme-light h6,
+.theme-light .font-bold,
+.theme-light .font-semibold {
+  color: #000000 !important;
+}
+
+/* Ensure all icons and SVGs are black and highly visible */
+.theme-light svg {
+  color: #000000 !important;
+}
+
+/* Calendar selected date numbers and grid items should also be black, never white/gray */
+.theme-light .react-calendar__tile,
+.theme-light .react-calendar__navigation button,
+.theme-light button {
+  color: #000000 !important;
+}
+
+/* Input placeholders should be readable dark colors */
+.theme-light ::placeholder,
+.theme-light input::placeholder,
+.theme-light textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Logo/Brand custom overrides to black */
+.theme-light .bg-gradient-to-tr.from-indigo-600,
+.theme-light .bg-gradient-to-tr.from-indigo-600 *,
+.theme-light .bg-gradient-to-br.from-indigo-600,
+.theme-light .bg-gradient-to-br.from-indigo-600 * {
+  background: #000000 !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+}
+
+/* Specific sub-logo brand text under "GUARDIAN" */
+.theme-light .text-\[\#6D5DFC\] {
+  color: #000000 !important;
+}
+
+/* Override all general background gradients to solid white in light theme */
+.theme-light .bg-gradient-to-r:not(button),
+.theme-light .bg-gradient-to-tr:not(button):not(.from-indigo-600),
+.theme-light .bg-gradient-to-br:not(button):not(.from-indigo-600),
+.theme-light .bg-gradient-to-tl:not(button),
+.theme-light .bg-gradient-to-bl:not(button),
+.theme-light .bg-gradient-to-t:not(button),
+.theme-light .bg-gradient-to-b:not(button) {
+  background: #FFFFFF !important;
+  background-image: none !important;
+}
+
+/* RED/ROSE light-mode guarantees so they look exactly like dark mode */
+.theme-light .text-rose-50, .theme-light .text-rose-50 * { color: #ffe4e6 !important; }
+.theme-light .text-rose-100, .theme-light .text-rose-100 * { color: #fecdd3 !important; }
+.theme-light .text-rose-200, .theme-light .text-rose-200 * { color: #fecdd3 !important; }
+.theme-light .text-rose-300, .theme-light .text-rose-300 * { color: #fda4af !important; }
+.theme-light .text-rose-400, .theme-light .text-rose-400 * { color: #fb7185 !important; }
+.theme-light .text-rose-500, .theme-light .text-rose-500 * { color: #f43f5e !important; }
+.theme-light .text-rose-600, .theme-light .text-rose-600 * { color: #e11d48 !important; }
+.theme-light .text-rose-700, .theme-light .text-rose-700 * { color: #be123c !important; }
+.theme-light .text-rose-800, .theme-light .text-rose-800 * { color: #9f1239 !important; }
+.theme-light .text-rose-900, .theme-light .text-rose-900 * { color: #881337 !important; }
+
+.theme-light .text-red-400, .theme-light .text-red-400 * { color: #f87171 !important; }
+.theme-light .text-red-500, .theme-light .text-red-500 * { color: #ef4444 !important; }
+.theme-light .text-red-600, .theme-light .text-red-600 * { color: #dc2626 !important; }
+.theme-light .text-red-700, .theme-light .text-red-700 * { color: #b91c1c !important; }
+
+.theme-light .bg-rose-500\/5 { background-color: rgba(244, 63, 94, 0.05) !important; background-image: none !important; }
+.theme-light .bg-rose-500\/10 { background-color: rgba(244, 63, 94, 0.1) !important; background-image: none !important; }
+.theme-light .bg-rose-500\/15 { background-color: rgba(244, 63, 94, 0.15) !important; background-image: none !important; }
+.theme-light .bg-rose-500\/20 { background-color: rgba(244, 63, 94, 0.2) !important; background-image: none !important; }
+.theme-light .bg-rose-50 { background-color: #fff1f2 !important; background-image: none !important; }
+.theme-light .bg-rose-100 { background-color: #ffe4e6 !important; background-image: none !important; }
+
+.theme-light .bg-red-500\/5 { background-color: rgba(239, 68, 68, 0.05) !important; background-image: none !important; }
+.theme-light .bg-red-500\/10 { background-color: rgba(239, 68, 68, 0.1) !important; background-image: none !important; }
+.theme-light .bg-red-500\/15 { background-color: rgba(239, 68, 68, 0.15) !important; background-image: none !important; }
+.theme-light .bg-red-50 { background-color: #fef2f2 !important; background-image: none !important; }
+.theme-light .bg-red-100 { background-color: #fee2e2 !important; background-image: none !important; }
+
+.theme-light .border-rose-100 { border-color: #ffe4e6 !important; }
+.theme-light .border-rose-500\/10 { border-color: rgba(244, 63, 94, 0.1) !important; }
+.theme-light .border-rose-500\/20 { border-color: rgba(244, 63, 94, 0.2) !important; }
+.theme-light .border-rose-500\/30 { border-color: rgba(244, 63, 94, 0.3) !important; }
+.theme-light .border-rose-500\/40 { border-color: rgba(244, 63, 94, 0.4) !important; }
+
+.theme-light .border-red-100 { border-color: #fee2e2 !important; }
+.theme-light .border-red-500\/10 { border-color: rgba(239, 68, 68, 0.1) !important; }
+.theme-light .border-red-500\/20 { border-color: rgba(239, 68, 68, 0.2) !important; }
+.theme-light .border-red-500\/30 { border-color: rgba(239, 68, 68, 0.3) !important; }
+
+
+
+
